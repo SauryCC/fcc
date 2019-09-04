@@ -258,14 +258,7 @@ jQuery( document ).ready(function( $ ) {
     // ------- social icon expand ------- //
 
     // ------- coming soon timer ------- //
-    $('#comming-countdown').countdown({
-        date: '10/5/2018 13:41:59',
-        offset: -100,
-        day: 'Day',
-        days: 'Days'
-        }, function() {
-            alert('Done!');
-    });
+    
     // ------- coming soon timer ------- //
 
     // ------- google map ------- //
