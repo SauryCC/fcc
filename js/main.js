@@ -1,7 +1,14 @@
 jQuery( document ).ready(function( $ ) {
 "use strict"
+    var pathname
     // ---------- Active Menu ---------- //
-        var pathname = window.location.pathname.match(/[^\/]+$/)[0];
+    if (window.location.pathname.match(/[^\/]+$/).length != 0){
+        pathname = window.location.pathname.match(/[^\/]+$/)[0];
+    }
+    else{
+        pathname = index.html
+    }
+        
 
         $('.cr-nav a').each(function() {
         if ($(this).attr('href') == pathname)
