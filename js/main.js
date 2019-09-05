@@ -6,7 +6,7 @@ jQuery( document ).ready(function( $ ) {
         pathname = window.location.pathname.match(/[^\/]+$/)[0];
     }
     else{
-        pathname = index.html
+        pathname = "index.html"
     }
         
 
