@@ -1,14 +1,14 @@
 jQuery( document ).ready(function( $ ) {
 "use strict"
     // ---------- Active Menu ---------- //
-		var pathname = window.location.pathname.match(/[^\/]+$/)[0];
+        var pathname = window.location.pathname.match(/[^\/]+$/)[0];
 
-		$('.cr-nav a').each(function() {
-		if ($(this).attr('href') == pathname)
-		{
-			$(this).parents('li').addClass('active');
-		}
-		});
+        $('.cr-nav a').each(function() {
+        if ($(this).attr('href') == pathname)
+        {
+            $(this).parents('li').addClass('active');
+        }
+        });
     // ---------- Active Menu ---------- //
     // ---------- Preloader ---------- //
     jQuery(window).load(function() {
@@ -154,8 +154,8 @@ jQuery( document ).ready(function( $ ) {
        slideWidth: 300,
        slideMargin: 15,
        ticker: true,
-	   tickerHover:true,
-	   useCSS:false,
+       tickerHover:true,
+       useCSS:false,
        speed: 15000
     });
     // ------- news ticker slider ------- //
@@ -258,7 +258,14 @@ jQuery( document ).ready(function( $ ) {
     // ------- social icon expand ------- //
 
     // ------- coming soon timer ------- //
-    
+    $('#comming-countdown').countdown({
+        date: '10/5/2018 13:41:59',
+        offset: -100,
+        day: 'Day',
+        days: 'Days'
+        }, function() {
+            alert('Done!');
+    });
     // ------- coming soon timer ------- //
 
     // ------- google map ------- //
@@ -286,14 +293,14 @@ jQuery( document ).ready(function( $ ) {
 
     // ------- Prety Photo ------- //
     $("a[data-rel]").each(function () {
-    	$(this).attr("rel", $(this).data("rel"));
+        $(this).attr("rel", $(this).data("rel"));
     });
     $("a[data-rel^='prettyPhoto']").prettyPhoto({
-    	animation_speed: 'normal',
-    	theme: 'dark_square',
-    	slideshow: 3000,
-    	autoplay_slideshow: false,
-    	social_tools: false
+        animation_speed: 'normal',
+        theme: 'dark_square',
+        slideshow: 3000,
+        autoplay_slideshow: false,
+        social_tools: false
     });
     // ------- Prety Photo ------- //
 
@@ -366,18 +373,18 @@ jQuery( document ).ready(function( $ ) {
         return false;
     });
     // ------- Scroll to Top ------- //
-	if ( $('.grid').length ){
-		// init Isotope
-			var $grid = $('.grid').isotope({
-			  itemSelector: '.grid-item'
-			});
-			// layout Isotope after each image loads
-			$grid.imagesLoaded().progress( function() {
-			  $grid.isotope('layout');
-			});		
-	}
-	// ------ ToolTip ------ //
-	$('[data-toggle="tooltip"]').tooltip()
+    if ( $('.grid').length ){
+        // init Isotope
+            var $grid = $('.grid').isotope({
+              itemSelector: '.grid-item'
+            });
+            // layout Isotope after each image loads
+            $grid.imagesLoaded().progress( function() {
+              $grid.isotope('layout');
+            });     
+    }
+    // ------ ToolTip ------ //
+    $('[data-toggle="tooltip"]').tooltip()
 });
 
 // ------- clock ------- //
