@@ -2,7 +2,7 @@ jQuery( document ).ready(function( $ ) {
 "use strict"
     var pathname
     // ---------- Active Menu ---------- //
-    if (window.location.pathname.match(/[^\/]+$/).length != 0){
+    if (window.location.pathname.match(/[^\/]+$/) != null){
         pathname = window.location.pathname.match(/[^\/]+$/)[0];
     }
     else{
